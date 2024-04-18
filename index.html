@@ -3,52 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background-image:url("photos.png");
+            background-size : auto;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="calculator">
-        <div class="display"> 
-            <input type="text" id="inputbox" value="0" placeholder="0" disabled>
-
+<body> 
+    <div class="overlay"></div>
+    <div class="wrapper">
+        <div class="">
+            <h1 class="title"><span>2025</span> NEW YEAR COUNTDOWN</h1>
+            <div class="countdowncontainer">
+                <div>
+                    <p id="days" class="big-text">0</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours" class="big-text">0</p>
+                    <span>hours</span>
+                </div>
+                <div>
+                    <p id="min" class="big-text">0</p>
+                    <span>min</span>
+                </div>
+                <div>
+                    <p id="sec" class="big-text">0</p>
+                    <span>sec</span>
+                </div>
+            </div>
         </div>
-   <div class="row">
-    <button type="button" class="opr">AC</button>
-    <button type="button"class="opr">DEL</button>
-    <button type="button"class="opr">%</button>
-    <button type="button"class="opr">/</button>
-   </div>
-   <div class="row">
-    <button type="button">7</button>
-    <button type="button">8</button>
-    <button type="button">9</button>
-    <button type="button"class="opr">*</button>
-   </div>
-   <div class="row">
-    <button type="button">4</button>
-    <button type="button">5</button>
-    <button type="button">6</button>
-    <button type="button"class="opr">+</button>
-   </div>
-   
-   <div class="row">
-    <div class="row">
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button"class="opr">-</button>
-       </div>
-       
-       <div class="row">
-        <button type="button">&#xB1;</button>
-    <button type="button">0</button>
-    <button type="button">.</button>
-    <button type="button"id="eqBtn">=</button>
-    
-   </div>
-</div>
-<script src="script.js"></script>
-
-    
+    </div>
 </body>
-</html>
+    
+
+<script src="script.js"></script>
+</html>.

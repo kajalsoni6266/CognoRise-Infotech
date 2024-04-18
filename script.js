@@ -1,33 +1,26 @@
-let display = document.getElementById('inputbox');
-let buttons=  document.querySelectorAll('button');
-let string ='';
-let buttonsArray = Array.from(buttons);
+let daysItem = document.querySelector("#days");
+let hoursItem = document.querySelector("#hours");
+let minItem = document.querySelector("#min");
+let secItem = document.querySelector("#sec");
 
+let countDown = () => {
+    let futureDate = new Date("1 jan 2025");
+    let currentDate = new Date();
+    let myDate = futureDate - currentDate;
+    //console.log(myDate);
+    let days = Math.floor(myDate / 1000 / 60 / 60 / 24);
+    let hours = Math.floor(myDate / 1000 / 60 / 60) % 24;
+    let  min = Math.floor(myDate / 1000 /  60 ) % 60;
+    let sec = Math.floor(myDate / 1000) % 60;
+   
 
+daysItem.innerHTML = days;
+hoursItem.innerHTML = hours;
+minItem.innerHTML = min;
+secItem.innerHTML = sec;
+}
 
-buttonsArray.forEach(btn =>{
-    btn.addEventListener('click',(e)=>{
-        if(e.target.innerHTML == '='){
-            string = (eval(string));
-            display.value = string;
-        }
-        else if(e.target.innerHTML == 'AC'){
-            string='';
-            display.value = string;
-        }
-        else if(e.target.innerHTML == 'DEL'){
-            string = string.substring(0, string.length-1);
-            display.value = string;
-        }
-        else if(e.target.id == 'plusminus'){
-            string = String(eval(string));
-            display.value = string;
-        }
+countDown()
 
-        
-        else{
-            string += e.target.innerHTML;
-            display.value = string;
-        }
-    });
-});
+setInterval(countDown , 1000);
+

@@ -1,75 +1,96 @@
 *{
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     box-sizing:border-box;
-    font-size:'arial','helvetika' 'sans-serif';
-    letter-spacing:1px;
-
-
 }
 body{
-    min-width:100vh;
-    max-height:100%;
+    background-image:url("photos.png");
+    background-image: no-repeat;
+    background-size:cover;
+    background-position:top;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-family:'poppins',sans-serif;
+    position:relative;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+  
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+.countdowncontainer{
+    display:flex;
+}
+
+.big-text{
+    font-size:4rem;
+}
+.title{
+    margin:10px;
+    text-align:center;
+    color:#fff;
+    width:100%;
+    letter-spacing:2px;
+    font-size:3rem;
+    line-height:5.5rem;
+}
+.title span{
+    display:block;
+    font-size:6rem;
+    letter-spacing:2rem;
+}
+.wrapper{
     display:flex;
     align-items:center;
-    justify-content: center;
-    background-color:rgb(23, 28, 34);
+    justify-content:center;
+    flex-wrap:wrap;
+    min-height:100vh;
 }
-.calculator{
-    padding:15px;
-    box-shadow:0 0 15px #000;
-    border:2px solid rgb(116,114,114);
-    border-radius:15px;
-
-
-
-}
-.display input{
-    width:360px;
-    border:none;
-    outline:none;
-    padding:20px;
-    margin:10px;
-    background:transparent;
+.countdowncontainer > div{
+    margin: 0 2rem;
+    text-align :center;
+    border:2px solid #fff;
+    padding:0px 20px;
+    border-radius:12px;
+    box-sizing:border-box;
     color:#fff;
-    font-size:40px;
-    text-align:right;
-    cursor:pointer;
-
+    min-width:150px;
 }
-input::placeholder{
-    color:#fff;
-
+@media (max-width:992px){
+    .countdowncontainer > div{
+        margin: 0 1rem;
+    }
 }
-button{
-    width:70px;
-    height:70px;
-    margin:10px;
-    background: transparent;
-    color:#fff;
-    font-size:22px;
-    font-weight:600;
-    border:0;
-    border-radius:50px;
-    box-shadow: -8px -6px 15px #000;
-    outline: 1px solid #313131;
-    outline-offset:3px; 
-    cursor:pointer;
-}
-button:active{
-    background:#000;
-    transform: translate(2px,2px);
+@media (max-width:767px){
+    .countdowncontainer > div{
+        flex-wrap:wrap;
+    } 
+    
+        .countdowncontainer > div{
+           margin:1rem auto;
+           max-width:150px;
+        } 
+        .title{
+            font-size:1.5rem;
+            line-height:3.5rem;
+            margin:10px 0px;
+        }
+        .title span{
+            font-size:2rem;
+            letter-spacing:1rem;
+        }
+        }
 
 
-}
-.opr{
-    color:yellow;
-    background-color:#1e1919;
-    font-weight:700px;
 
-}
-#eqBtn{
-    background-color:orangered;
-    font-weight:900;
 
-}
+
+    
