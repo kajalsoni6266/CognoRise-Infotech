@@ -3,42 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style type="text/css">
-        body{
-            background-image:url("photos.png");
-            background-size : auto;
-        }
-    </style>
+    <title>BMI CALCULATOR</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
-    <div class="overlay"></div>
-    <div class="wrapper">
-        <div class="">
-            <h1 class="title"><span>2025</span> NEW YEAR COUNTDOWN</h1>
-            <div class="countdowncontainer">
-                <div>
-                    <p id="days" class="big-text">0</p>
-                    <span>Days</span>
-                </div>
-                <div>
-                    <p id="hours" class="big-text">0</p>
-                    <span>hours</span>
-                </div>
-                <div>
-                    <p id="min" class="big-text">0</p>
-                    <span>min</span>
-                </div>
-                <div>
-                    <p id="sec" class="big-text">0</p>
-                    <span>sec</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-    
+<body>
+    <DIV class="container">
+        <h1>BMI CALCULATOR</h1>
 
-<script src="script.js"></script>
-</html>.
+        <P>HEIGHT in (feet)</P>
+        <input type="text" id ="height" >
+
+        <p>WEIGHT in (kg)</p>
+        <input type="text" id="weight">
+
+        <button class = "btns" id="calculate" >calculate</button>
+        <div id="result">RESULT</div>
+        <h2 id="bmi"></h2>
+        <p id="category"></p>
+    </DIV>
+    <script src="script.js"></script>
+</body>
+</html>

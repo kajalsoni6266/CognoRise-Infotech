@@ -1,26 +1,33 @@
-let daysItem = document.querySelector("#days");
-let hoursItem = document.querySelector("#hours");
-let minItem = document.querySelector("#min");
-let secItem = document.querySelector("#sec");
+let height = document.getElementById("height");
+let weight = document.getElementById("weight");
+let bmiShow = document.getElementById("bmi");
+let calculate = document.getElementById("calculate");
+let result = document.getElementById("result");
 
-let countDown = () => {
-    let futureDate = new Date("1 jan 2025");
-    let currentDate = new Date();
-    let myDate = futureDate - currentDate;
-    //console.log(myDate);
-    let days = Math.floor(myDate / 1000 / 60 / 60 / 24);
-    let hours = Math.floor(myDate / 1000 / 60 / 60) % 24;
-    let  min = Math.floor(myDate / 1000 /  60 ) % 60;
-    let sec = Math.floor(myDate / 1000) % 60;
-   
-
-daysItem.innerHTML = days;
-hoursItem.innerHTML = hours;
-minItem.innerHTML = min;
-secItem.innerHTML = sec;
+calculate.addEventListener("click", function(){
+    let meter = height.value*0.3048;
+    let squareMeter = meter*meter;
+    let bmiCal = (weight.value/squareMeter).toFixed(2);
+    console.log(bmiCal);
+    
+bmiShow.innerHTML="your BMI is:" +bmiCal;
+if(bmiCal<18){
+    document.getElementById("category").innerHTML="you are Underweight";
 }
+    else if(bmiCal>=18 && bmiCal<24){
+        document.getElementById("category").innerHTML="you are normal weight";
+    }
+    else if(bmiCal<=24 && bmiCal<30){
+        document.getElementById("category").innerHTML="you are Above weight";
+    }
+   else  if(bmiCal>=30 ){
+        document.getElementById("category").innerHTML=" you are obese";
+    }
 
-countDown()
+    
+     
+    
+        
+    
 
-setInterval(countDown , 1000);
-
+})
